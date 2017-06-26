@@ -1,3 +1,12 @@
+/* Dimostrazione dell'algoritmo per induzione:
+ * P(n) = "La funzione creaCoppieSenzaRipetizioni() aggiunge un nodo in coda alla lista
+ * se il numero di elementi dell'array A[] è maggiore o uguale 1, altrimenti non vi sono più
+ * elementi da aggiungere."
+ *
+ * P(n0) è vera: Se n < 1, non vi sono coppie possibili, restituendo NULL.
+ * P(n - 1) => P(n): Essendo n >= 1, è ancora possibile aggiungere un elemento alla lista.
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -22,7 +31,7 @@ int main(void) {
     struct Lista *l = NULL;
 
     int val[4] = {2, 8, 6, 10};
-    int n = 4;
+    int n = 1;
 
     unsigned short int c = 0;
 
@@ -81,7 +90,7 @@ struct Lista *creaCoppieConRipetizioni(int n[], int c, int l, const int end) {
 struct Lista *creaCoppieSenzaRipetizioni(int A[], int n) {
     struct Lista *head = NULL;
 
-    if (n == 0) {
+    if (n < 1) {
         return NULL;
     }
     else {
