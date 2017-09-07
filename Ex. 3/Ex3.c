@@ -1,3 +1,5 @@
+// N.B.: L'algoritmo può essere risolto con un algoritmo simile ma migliore.
+
 /* Dimostrazione dell'algoritmo per induzione:
  * P(n) = "La funzione creaCoppieSenzaRipetizioni() aggiunge un nodo in coda alla lista
  * se il numero di elementi dell'array A[] è maggiore o uguale 1, altrimenti non vi sono più
