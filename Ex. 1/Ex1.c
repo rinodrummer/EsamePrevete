@@ -19,12 +19,12 @@ int maggioreDiK(struct Studente V[], int dimV, int k) {
         media = calcolaMedia(V[i].votiEsami, V[i].nEsami);
         
         if (media > k) {
-            printf("Studente con media %d eliminato.\n", media);
-        
             for (j = i; j < dimV; j++) {
                 V[i] = V[j];
             }
             dimV--;
+            
+            printf("Studente con media %d eliminato.\n", media);
         }
     }
     
@@ -88,7 +88,8 @@ int main(void) {
         stud[i] = inserisciStudente();
     }
     
-    printf("%d\n", maggioreDiK(stud, n, 25));
+    n = maggioreDiK(stud, n, 25);
+    printf("%d\n", n);
     
     system("pause");
     return 0;
