@@ -58,7 +58,7 @@ struct Studente inserisciStudente() {
     printf("\tCognome: ");
     scanf("%s", s.cognome);
     
-    printf("\tNumero degli esami conseguiti (max. 100): ");
+    printf("\tNumero degli esami conseguiti (max. %d): ", MAX_ESAMI);
     scanf("%d", &s.nEsami);
     
     printf("\tInserimento esami:\n\n");
@@ -81,7 +81,7 @@ int main(void) {
     int n;
     int i;
     
-    printf("Digitare il numero degli studenti da inserire: ");
+    printf("Digitare il numero degli studenti da inserire (max. %d): ", MAX_STUD);
     scanf("%d", &n);
     
     for (i = 0; i < n; i++) {
