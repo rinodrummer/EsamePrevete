@@ -21,8 +21,9 @@ int maggioreDiK(struct Studente V[], int dimV, int k) {
         if (media > k) {
             for (j = i; j < dimV; j++) {
                 V[i] = V[j];
+                dimV--;
             }
-            dimV--;
+            media = 0;
             
             printf("Studente con media %d eliminato.\n", media);
         }
