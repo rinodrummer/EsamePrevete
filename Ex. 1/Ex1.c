@@ -23,10 +23,11 @@ int maggioreDiK(struct Studente V[], int dimV, int k) {
                 V[i] = V[j];
                 dimV--;
             }
-            media = 0;
             
             printf("Studente con media %d eliminato.\n", media);
         }
+        
+        media = 0;
     }
     
     return dimV;
