@@ -23,8 +23,8 @@ int maggioreDiK(struct Studente *V[], int dimV, int k) {
         if (media > k) {
             free(V[i]);
             
-            for (j = i; j < dimV; j++) {
-                V[i] = V[j];
+            for (j = i; j < dimV - 1; j++) {
+                V[j] = V[j + 1];
             }
             dimV--;
             
